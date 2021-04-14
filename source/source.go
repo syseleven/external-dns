@@ -217,9 +217,9 @@ func endpointsForHostname(hostname string, targets endpoint.Targets, ttl endpoin
 	for _, t := range targets {
 		switch suitableType(t) {
 		case endpoint.RecordTypeA:
-			realIp := parseNipIoIP(t)
-			if realIp != "" {
-				aTargets = append(aTargets, realIp)
+			realIP := parseNipIoIP(t)
+			if realIP != "" {
+				aTargets = append(aTargets, realIP)
 			} else {
 				aTargets = append(aTargets, t)
 			}
